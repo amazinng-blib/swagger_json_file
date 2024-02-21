@@ -19,7 +19,7 @@
           "description": "Merchant creates product using this route.",
           "operationId": "createProductByMerchant",
           "requestBody": {
-            "description": "Created product by merchant",
+            "description": "Create product by merchant",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,13 +52,13 @@
         "put": {
           "tags": ["Online Merchant Store"],
           "summary": "Update Merchant product",
-          "description": "Update merchant product.",
+          "description": "Update product by merchant  using product ID.",
           "operationId": "updateMerchantProduct",
           "parameters": [
             {
               "name": "productId",
               "in": "path",
-              "description": "Id of product to update",
+              "description": "Id of product to be update",
               "required": true,
               "schema": {
                 "type": "string"
@@ -102,8 +102,8 @@
         },
         "delete": {
           "tags": ["Online Merchant Store"],
-          "summary": "Delete Merchant products",
-          "description": "Delete merchant product using product id",
+          "summary": "Delete Merchant products route",
+          "description": "Delete product using product id by merchant",
           "operationId": "deleteProductById",
           "parameters": [
             {
@@ -140,14 +140,14 @@
       "/{merchantId}": {
         "get": {
           "tags": ["Online Merchant Store"],
-          "summary": "Filter Merchant products",
+          "summary": "Filter all Merchant products",
           "description": "Returns all the products uploaded by a merchant",
           "operationId": "filterProductByMerchantId",
           "parameters": [
             {
               "name": "merchantId",
               "in": "path",
-              "description": "MerchantId of products to return",
+              "description": "Filter products using merchant ID",
               "required": true,
               "schema": {
                 "type": "integer",
